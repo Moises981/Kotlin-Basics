@@ -20,7 +20,20 @@ fun showPerson(vararg persons: String) {
     newTopic("While")
     var i = 0
     while (i < persons.size) {
+        if (persons[i] == "Mary") println("It's mary!")
         println(persons[i])
         i++;
+    }
+
+    newTopic("When")
+    i = (persons.indices).random()
+    println(i)
+    when (persons[i]) {
+        "Angel" -> println("It's Angel!")
+        "Mary" -> {
+            println("Go to next")
+            println(2 + 4)
+        }
+        else -> println(persons[i])
     }
 }
