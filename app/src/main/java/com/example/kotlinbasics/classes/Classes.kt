@@ -25,4 +25,20 @@ fun main() {
     println(myUser)
     println(mySister)
     println(myFriend)
+
+    newTopic("Scoped functions")
+    with(smartphone) {
+        println("Private? $isPrivate")
+        call()
+    }
+
+//    myFriend.group = Group.WORK.ordinal
+//    myFriend.name = "Anderson"
+//    myFriend.lastName = "Tito"
+    myFriend.apply {
+        group = Group.WORK.ordinal
+        name = "Anderson"
+        lastName = "Tito"
+    }
+    println(myFriend)
 }
