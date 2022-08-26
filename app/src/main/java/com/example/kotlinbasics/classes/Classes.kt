@@ -17,7 +17,12 @@ fun main() {
     smartphone.showNumber()
     println("Private? ${smartphone.isPrivate}")
 
-    val myUser: User = User(0, "Jesus", "Castillo", 0)
+    val myUser: User = User(0, "Jesus", "Castillo", Group.FAMILY.ordinal)
+    val mySister: User = myUser.copy(id = 1, name = "Milagros")
+    val myFriend: User = myUser.copy(id = 2, group = Group.FRIEND.ordinal)
+
     println(myUser.component3())
     println(myUser)
+    println(mySister)
+    println(myFriend)
 }
