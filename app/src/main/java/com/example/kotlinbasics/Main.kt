@@ -1,5 +1,7 @@
 package com.example.kotlinbasics
 
+const val separator = "===================="
+
 fun main() {
     newTopic("Hello Kotlin")
 
@@ -21,5 +23,5 @@ fun main() {
 }
 
 fun newTopic(topic: String) {
-    print("\n==================== $topic ====================\n")
+    print("\n$separator $topic $separator\n")
 }
